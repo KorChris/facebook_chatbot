@@ -68,6 +68,7 @@ function receivedMessage(event) {
     console.log(content);
 
     var echo_message = "ECHO : " + content;
+    console.log(echo_message);
     sendTextMessage(senderId, echo_message);
 }
 
@@ -98,6 +99,7 @@ function receivedPostback(event) {
 
 // sends message to user
 function sendTextMessage(recipientId, message) {
+    console.log("SEND MESSAGE");
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: { access_token: PAGE_ACCESS_TOKEN },
@@ -111,6 +113,7 @@ function sendTextMessage(recipientId, message) {
             console.log('Error sending message: ' + response.error);
         }
     });
+    console.log("REQUEST END");
 }
 
 app.listen(app.get('port'), function() {
