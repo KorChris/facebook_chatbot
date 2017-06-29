@@ -68,7 +68,7 @@ function receivedMessage(event) {
     console.log(content);
 
     var echo_message = "ECHO : " + content;
-    sendMessage(senderId, echo_message);
+    sendTextMessage(senderId, echo_message);
 }
 
 /*
@@ -97,7 +97,7 @@ function receivedPostback(event) {
 }
 
 // sends message to user
-function sendMessage(recipientId, message) {
+function sendTextMessage(recipientId, message) {
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: { access_token: PAGE_ACCESS_TOKEN },
