@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
 
 
 app.get('/webhook', function (req, res) {
-	if (req.query['hub.verify_token'] === VERIFY_TOKEN) {
+	if (req.query['hub.verify_token'] === 'VERIFY_TOKEN') {
 		res.send(req.query['hub.challenge']);
 	}
 	res.send('Error, wrong token');
