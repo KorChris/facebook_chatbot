@@ -26,7 +26,9 @@ app.get('/webhook', function(req, res) {
 })
 
 app.post("/webhook", function(req, res) {
+    console.log("WEBHOOK GET IT WORKS");
     var data = req.body;
+    console.log(data);
 
     // Make sure this is a page subscription
     if (data.object == 'page') {
@@ -59,8 +61,11 @@ app.post("/webhook", function(req, res) {
 });
 
 function receivedMessage(event) {
+    console.log("RECEIVED MESSAGE IT WORKS");
     var senderId = event.sender.id;
     var content = event.message.text;
+
+    console.log(content);
 
     var echo_message = "ECHO : " + content;
     sendMessage(senderId, echo_message);
@@ -74,6 +79,7 @@ function receivedMessage(event) {
  * 
  */
 function receivedPostback(event) {
+    console.log("RECEIVED POSTBACK IT WORKS");
     var senderID = event.sender.id;
     var recipientID = event.recipient.id;
     var timeOfPostback = event.timestamp;
