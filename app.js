@@ -6,7 +6,7 @@ const request = require('request');
 const app = express();
 
 //작은 따옴표 사이에 본인이 받으신 token을 paste합니다.
-var PAGE_ACCESS_TOKEN = 'EAAGVLbE00jMBAAC3loSBCJts3FjjZBY4Q6q9j1u5NThYibioOTEUapZBdDOZAZBETcjsVfXMbdLjYMFZAhsZAjWu0U1QNqctfyo7XC0Dnq52xCKbZCgTSZALdP5mH8BZBEo4igPSi3ohVzNZAxczZBQFWZByxLmG1QogoHmENAx1ZA9slw82rDwV1tYa9';
+var PAGE_ACCESS_TOKEN = 'EAAGVLbE00jMBAAWIMXE7mT9RdnRnuliqNlYUz2t2ADiIQaTcnJrVdNBDfJ88h2BZCuBadlkVPQ9R67dWZCKyKGjGMLDl81vJHjtlHdvZCmFAJSdcDfHi0UODVtOXQgDEGZCJZBMXvNZCRhZApRhmUS7NPM37sxN5M6ACAXST1lRPH3xBEnASayp';
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -99,16 +99,16 @@ function receivedPostback(event) {
 // sends message to user
 function sendMessage(recipientId, message) {
     request({
-        url: "https://graph.facebook.com/v2.6/me/messages",
+        url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: { access_token: PAGE_ACCESS_TOKEN },
-        method: "POST",
+        method: 'POST',
         json: {
             recipient: { id: recipientId },
             message: message,
         }
     }, function(error, response, body) {
         if (error) {
-            console.log("Error sending message: " + response.error);
+            console.log('Error sending message: ' + response.error);
         }
     });
 }
