@@ -6,7 +6,7 @@ const request = require('request');
 const app = express();
 
 //작은 따옴표 사이에 본인이 받으신 token을 paste합니다.
-var PAGE_ACCESS_TOKEN = 'EAAGVLbE00jMBAAWIMXE7mT9RdnRnuliqNlYUz2t2ADiIQaTcnJrVdNBDfJ88h2BZCuBadlkVPQ9R67dWZCKyKGjGMLDl81vJHjtlHdvZCmFAJSdcDfHi0UODVtOXQgDEGZCJZBMXvNZCRhZApRhmUS7NPM37sxN5M6ACAXST1lRPH3xBEnASayp';
+var PAGE_ACCESS_TOKEN = 'EAAGVLbE00jMBAIPnNlGQZBW5Y4rfX3tII1HwWi3gAdwpohEzaJV7u6S2wt5xR9HEBU4g9zhGrcmn5ZAXToK1PONJgEZA17azgbkQjiLBskEZB9a3CmOzdEFkkOAXyirXGOZAH2gZAZBYEXjEjh76SEqqXrXdbAhtldfDp6IgY56aMGKMLJO7peb';
 
 app.set('port', (process.env.PORT || 5000));
 
