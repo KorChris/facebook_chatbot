@@ -6,7 +6,9 @@ const request = require('request');
 const app = express();
 
 //작은 따옴표 사이에 본인이 받으신 token을 paste합니다.
-var PAGE_ACCESS_TOKEN = 'EAAGVLbE00jMBAKdtDAuMoPMmu55gYZCKJt4SD3ZBbhe82XrvV5j4glKZANAaHqlc8is5RqAr185idgkDj9M0vqzg872xZCxdXrq8EzCqnycmCFvddVE2BgnAJgyQ59ESCQy6UEa8eLKcZARlp2jcw6lBUI5wJSwA9n3B1ScLr6JoqJBJwc3uS';
+//나중에 보안을 위해서 따로 setting을 하는 방법을 알려드리겠습니다.
+//이 토큰이 포함된 파일을 절대 업로드하거나 github에 적용시키지 마세요.
+var PAGE_ACCESS_TOKEN = '';
 
 app.set('port', (process.env.PORT || 5000));
 
